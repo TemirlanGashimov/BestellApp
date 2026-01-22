@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/standard.css" />
   </head>
-  <body>
+  <body onload="generateMenu()">
     <header></header>
     <section class="background"></section>
     <img
@@ -40,6 +40,8 @@
         <p >The best of Burgers, Pizza and Greens all in one great place.</p>
       </div>
     </div>
+
+    <div id="menu_container"></div>
   </body>
   <script src="sripts/db.js"></script>
   <script src="sripts/templates.js"></script>

@@ -2,22 +2,22 @@ let myDishes = [
     {
         "name": "Veggie mushroom black burger",
         "price": 16.90,
-        "description:": "Mixed green salad, Tomatoes, Edamame, Mushrooms",
+        "description": "Mixed green salad, Tomatoes, Edamame, Mushrooms",
     },
     {
         "name": "All meat burger",
         "price": 15.90,
-        "description:":"Beef, Bacon, Dill pickles, Smoked cheese, Ketchup, BBQ souse",
+        "description":"Beef, Bacon, Dill pickles, Smoked cheese, Ketchup, BBQ souse",
     },
      {
         "name": "Beef red burger",
         "price" : 14.90,
-        "description:": "Beef, Cheese, Tomatoes, Lettuce, Onion",
+        "description": "Beef, Cheese, Tomatoes, Lettuce, Onion",
     },
      {
         "name": "Big chicken burger",
         "price": 15.90,
-        "description:":"Beef, Cheese, Tomatoes, Lettuce, Onion, Bell pepper",
+        "description":"Beef, Cheese, Tomatoes, Lettuce, Onion, Bell pepper",
     },
     {
         "name": "Pizza Margherita",
