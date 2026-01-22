@@ -6,8 +6,29 @@ header {
     padding-left: 60px;
 }
 
-body{
+.background{
     background-image: url(./assets/icons/header\ photo.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 540px;
+    width: 100%;
+}
+
+.logo_burger{
+    position: absolute; 
+    top: 72%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 200px; 
+    z-index: 1; 
+}
+.burger_hause{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
 }
