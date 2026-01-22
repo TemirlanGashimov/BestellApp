@@ -5,3 +5,9 @@ header {
     align-items: center;
     padding-left: 60px;
 }
+
+body{
+    background-image: url(./assets/icons/header\ photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
