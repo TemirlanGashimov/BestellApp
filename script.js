@@ -9,11 +9,11 @@ function generateMenu(){
     }
 }
 
-myDishes.forEach((myDishes,i) => {
-    menuListContainer.innerHTML += `<li>${myDishes}</li>`;
-    if((i +1) % 4 === 0) {
-        menuListContainer.innerHTML += `<h3>Neuer Kategorie</h3>`
-    }
-    });
+// myDishes.forEach((myDishes,i) => {
+//     menuListContainer.innerHTML += `<li>${myDishes}</li>`;
+//     if((i +1) % 4 === 0) {
+//         menuListContainer.innerHTML += `<h3>Neuer Kategorie</h3>`
+//     }
+//     });
 
 

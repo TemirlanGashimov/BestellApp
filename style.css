@@ -4,6 +4,15 @@ header {
   display: flex;
   align-items: center;
   padding-left: 80px;
+  padding-right: 40px;
+}
+
+footer {
+        display: flex;
+    justify-content: center;
+  height: 80px;
+  background-color: rgba(231, 108, 31, 1);
+  padding-left: 80px;
 }
 
 .background {
@@ -33,9 +42,9 @@ header {
   padding-top: 80px;
 }
 
-.menu_caontainer{
-    padding-top: 20px;
-    padding-left: 80px;
+.menu_caontainer {
+  padding-top: 20px;
+  padding-left: 80px;
 }
 
 .style_menu_box {
@@ -44,7 +53,16 @@ header {
   width: 700px;
   border-radius: 10px;
   box-sizing: border-box;
-  background-color: rgba(253, 234, 220, 1) ;
+  background-color: rgba(253, 234, 220, 1);
   padding: 15px;
   margin-bottom: 16px;
+  gap: 16px;
+}
+
+.footer_flex_box {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  
 }
