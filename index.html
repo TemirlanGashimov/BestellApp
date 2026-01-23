@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="styles/standard.css" />
   </head>
   <body onload="generateMenu()">
-    <header></header>
+    <header> <img src="./assets/fonts/Capa 1.png" alt=""> </header>
     <section class="background"></section>
     <img
       class="logo_burger"
@@ -32,16 +32,14 @@
     />
     <div class="burger_hause palanquin-bold" >
       <div>
-        <h1>
-          BurgerHause <img src="./assets/icons/bewertung.png" alt="Bewertung" />
-        </h1>
+            <span class="burger">Burger</span><span class="hause">Hause <img src="./assets/icons/bewertung.png" alt="Bewertung" /></span>
       </div>
       <div>
         <p >The best of Burgers, Pizza and Greens all in one great place.</p>
       </div>
     </div>
-
-    <div id="menu_container"></div>
+    <div id="menu-list"></div>
+    <div id="menu_container" class="menu_caontainer"></div>
   </body>
   <script src="sripts/db.js"></script>
   <script src="sripts/templates.js"></script>

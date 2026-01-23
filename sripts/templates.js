@@ -1,13 +1,17 @@
 function generateMenuHtml(i){
     return`
-    <div class="">
-    <h3>${myDishes[i].name}</h3>
-    
-    <img class="" src="./assets/img/${myDishes[i].img}"  alt="${myDishes[i].alt}"</div>
+    <div class="style_menu_box">
 
-    <p> ${myDishes[i].price.toFixed(2)} </p>
+    <img class="" src="./assets/img/${myDishes[i].img}"  alt="${myDishes[i].alt}"
     
-    <p> ${myDishes[i].description}</p>
+    <div>
+   <div> <h3>${myDishes[i].name}</h3>
+    <span> ${myDishes[i].description}</span> </div>
+
+    <div class="prices"> <span> ${myDishes[i].price.toFixed(2)} </span> </div>
     
+    
+    
+    </div>
     `
 }
