@@ -8,6 +8,7 @@ let myDishes = [
         "alt" : "veggie_mushroom_black_burger", 
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+        "amount": 0,
     },
     {
         "name": "All meat burger",
@@ -17,6 +18,7 @@ let myDishes = [
         "alt" : "all_meat_burger",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
      {
         "name": "Beef red burger",
@@ -26,6 +28,7 @@ let myDishes = [
         "alt" : "beef_red_burger",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
      {
         "name": "Big chicken burger",
@@ -35,6 +38,7 @@ let myDishes = [
         "alt" : "big_chicken_burger",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Pizza Margherita",
@@ -44,6 +48,7 @@ let myDishes = [
         "alt" : "pizza_margherita",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Pizza Chorizo",
@@ -53,6 +58,7 @@ let myDishes = [
         "alt" : "pizza_chorizo",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Funghi",
@@ -62,6 +68,7 @@ let myDishes = [
         "alt" : "pizza_funghi",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Quattro Formaggi with Chichen",
@@ -71,6 +78,7 @@ let myDishes = [
         "alt" : "quattro_formaggi_with_chichen",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Warm beef arugula salad",
@@ -80,6 +88,7 @@ let myDishes = [
         "alt" : "warm_beef_arugula_salad",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Mini green Salad",
@@ -89,6 +98,7 @@ let myDishes = [
         "alt" : "mini_green_salad",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Green Salad with sea food",
@@ -98,6 +108,7 @@ let myDishes = [
         "alt" : "green_salad_with_sea_food",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
     {
         "name": "Vegan green salad with tofu",
@@ -107,5 +118,6 @@ let myDishes = [
         "alt" : "vegan_green_salad_with_tofu",
         "btn": "add_to_basket.png",
         "btnalt":"add_to_basket",
+         "amount": 0,
     },
 ]
