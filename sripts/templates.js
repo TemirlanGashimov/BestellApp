@@ -9,7 +9,7 @@ function generateMenuHtml(i){
     <span> ${myDishes[i].description}</span> </div>
 
     <div class="prices"> <span> ${myDishes[i].price.toFixed(2)}€ </span> 
-    <img  src="./assets/fonts/${myDishes[i].btn}"  alt="${myDishes[i].btnalt}"></div>
+    <img  src="./assets/fonts/${myDishes[i].btn}"  alt="${myDishes[i].btnalt}" onclick="addToBasket(${i})"></div>
     
     
     
