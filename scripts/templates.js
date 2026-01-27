@@ -2,7 +2,7 @@ function generateMenuHtml(i) {
   return `
     <div class="style_menu_box">
 
-    <img src="./assets/img/${myDishes[i].img}"  alt="${myDishes[i].alt}"
+    <img src="./assets/img/${myDishes[i].img}"  alt="${myDishes[i].alt}">
     
     <div>
    <div> <h3>${myDishes[i].name}</h3>
