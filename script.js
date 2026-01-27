@@ -10,4 +10,6 @@ function generateMenu() {
 
 function addToBasket(i) {
   myDishes[i].amount++;
+
+  myDishes.push()
 }
