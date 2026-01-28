@@ -68,38 +68,63 @@ function renderBasket() {
 
     basketDiv.innerHTML += `
        
-    <div class="basket-items">
-        <div>
-            <h3>
-            ${basket[indexBasket].amount} x ${basket[indexBasket].name}</h3><br>
-        </div>
-        
-        <div class="btns-price">    
-        <span class="btn-style">
-         <button onclick="increaseAmount(${indexBasket})"><img src="./assets/icons/plus_button.png" alt="plus button"></button>
-            ${basket[indexBasket].amount}
-            ${minusButton}
-            ${deleteButton}</span>
-           <span> ${itemTotal.toFixed(2)}€</span>
-            
-        </div>
-    </div>`;
+    <div class="basket-item-card">
+    <div class="basket-item-title">
+      ${basket[indexBasket].amount} x ${basket[indexBasket].name}
+    </div>
+
+    <div class="basket-item-bottom">
+      <div class="basket-item-actions">
+        <button onclick="deleteItemFromBasket(${indexBasket})">
+          <img src="./assets/icons/delete.png">
+        </button>
+
+        ${basket[indexBasket].amount >= 2 ? `
+          <button onclick="removeFromBasket(${indexBasket})">
+            <img src="./assets/icons/minus_button.png">
+          </button>
+        ` : ""}
+
+        <button onclick="increaseAmount(${indexBasket})">
+          <img src="./assets/icons/plus_button.png">
+        </button>
+      </div>
+
+      <div class="basket-item-price">
+        ${itemTotal.toFixed(2)}€
+      </div>
+    </div>
+  </div>`;
   }
 
   let finalPrice = totalPrice + deliveryPrice;
 
   basketDiv.innerHTML += `
    <div class="basket-summary">
-      <div>Zwischensumme: ${totalPrice.toFixed(2)}€</div>
-      <div>Lieferung: ${deliveryPrice.toFixed(2)}€ <hr></div>
-      <div><strong>Gesamt: ${finalPrice.toFixed(2)}€</strong></div>
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span>${totalPrice.toFixed(2)}€</span>
     </div>
+
+    <div class="summary-row">
+      <span>Delivery fee</span>
+      <span>${deliveryPrice.toFixed(2)}€</span>
+    </div>
+
+    <hr>
+
+    <div class="summary-row total">
+      <span>Total</span>
+      <span>${finalPrice.toFixed(2)}€</span>
+    </div>
+  </div>
   `;
 
   basketDiv.innerHTML +=`
-  <button class="order-button" onclick="placeOrder(${finalPrice.toFixed(2)})"> Bestellen ${finalPrice.toFixed(2)}€</button>
-  
-  `
+  <button class="buy-now-btn" onclick="placeOrder(${finalPrice.toFixed(2)})">
+    Bestellen (${finalPrice.toFixed(2)}€)
+  </button>
+  `;
 }
 
 function increaseAmount(indexBasket) {
