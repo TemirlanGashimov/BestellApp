@@ -58,6 +58,11 @@ footer {
   gap: 16px;
 }
 
+.menu_style{
+  display: flex;
+  width: 100%;
+}
+
 .footer_flex_box {
   color: white;
   display: flex;
@@ -86,7 +91,7 @@ footer {
 }
 
 .basket_wrapper {
-  width: 300px;
+  width: 350px;
   flex-grow: 1;
   padding-top: 20px;
 }
@@ -98,6 +103,7 @@ footer {
   position: sticky;
   top: 0;
   border-radius: 15px 0 0 15px;
+  overflow-y: auto;
 }
 
 .your-basket-color {
@@ -110,10 +116,60 @@ footer {
 
 .basket-items{
   background-color: rgba(253, 234, 220, 1);
-  overflow-y: auto;
-  height: 50 px;
   margin: 16px;
   border-radius: 8px;
-      width: auto;
-    height: auto;
+  width: auto; 
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px 8px 16px;
+}
+
+.basket-summary{
+  color: rgba(253, 234, 220, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 0 16px;
+}
+
+.btns-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-style{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+#orderDialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  margin: auto;
+}
+
+#orderDialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+  padding: 24px 32px;
+  text-align: center;
+  background: #2b2b2b;
+  color: white;
+  border-radius: 12px;
+  width: 280px;
+}
+
+.dialog-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
 }
