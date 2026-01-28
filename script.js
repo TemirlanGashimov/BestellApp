@@ -2,11 +2,11 @@ let basket = [];
 
 const dialog = document.getElementById("orderDialog");
 
-    dialog.addEventListener("click", (event) => {
-        if (event.target === dialog) {
-            dialog.close();
-        }
-    });
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) {
+    dialog.close();
+  }
+});
 
 function generateMenu() {
   document.getElementById("menu_container").innerHTML = "";
@@ -40,10 +40,11 @@ function addToBasket(i) {
 
 function renderBasket() {
   let basketDiv = document.getElementById("basket");
-  basketDiv.innerHTML = "<h3 class='your-basket-color'> Your Basket </h3>";
+  basketDiv.innerHTML = "<h3 class='your-basket-color'> Warenkorb </h3>";
 
   if (basket.length === 0) {
-    basketDiv.innerHTML += "<p> Warenkorb Leer </p>";
+    basketDiv.innerHTML +=
+      "<p class='shopping-cart-empty'> Warenkorb ist leer  </p>";
     return;
   }
 
@@ -52,7 +53,6 @@ function renderBasket() {
 
   for (let indexBasket = 0; indexBasket < basket.length; indexBasket++) {
     let itemTotal = basket[indexBasket].amount * basket[indexBasket].price;
-
     totalPrice += itemTotal;
 
     let minusButton = "";
@@ -67,7 +67,6 @@ function renderBasket() {
     }
 
     basketDiv.innerHTML += `
-       
     <div class="basket-item-card">
     <div class="basket-item-title">
       ${basket[indexBasket].amount} x ${basket[indexBasket].name}
@@ -79,11 +78,13 @@ function renderBasket() {
           <img src="./assets/icons/delete.png">
         </button>
 
-        ${basket[indexBasket].amount >= 2 ? `
+        ${basket[indexBasket].amount >= 2? `
           <button onclick="removeFromBasket(${indexBasket})">
             <img src="./assets/icons/minus_button.png">
           </button>
-        ` : ""}
+        `
+        : ""
+        }
 
         <button onclick="increaseAmount(${indexBasket})">
           <img src="./assets/icons/plus_button.png">
@@ -102,28 +103,30 @@ function renderBasket() {
   basketDiv.innerHTML += `
    <div class="basket-summary">
     <div class="summary-row">
-      <span>Subtotal</span>
+      <span>Zwischensumme</span>
       <span>${totalPrice.toFixed(2)}€</span>
     </div>
 
     <div class="summary-row">
-      <span>Delivery fee</span>
+      <span>Lieferkosten</span>
       <span>${deliveryPrice.toFixed(2)}€</span>
     </div>
 
     <hr>
 
     <div class="summary-row total">
-      <span>Total</span>
+      <span>Gesamtsumme</span>
       <span>${finalPrice.toFixed(2)}€</span>
     </div>
-  </div>
   `;
 
-  basketDiv.innerHTML +=`
+  basketDiv.innerHTML += `
+  <div class="btn-position"> 
   <button class="buy-now-btn" onclick="placeOrder(${finalPrice.toFixed(2)})">
     Bestellen (${finalPrice.toFixed(2)}€)
   </button>
+  </div>
+  </div>
   `;
 }
 
@@ -148,11 +151,21 @@ function deleteItemFromBasket(indexBasket) {
 }
 
 function placeOrder(finalPrice) {
-    dialog.showModal();
-    basket = [];
-    renderBasket();
+  dialog.showModal();
+  basket = [];
+  renderBasket();
 }
 
 function closeOrderDialog() {
-    document.getElementById("orderDialog").close();
+  document.getElementById("orderDialog").close();
+}
+
+function openBasketMobile() {
+    document.querySelector(".basket_wrapper").classList.add("overlay");
+    document.body.classList.add("no-scroll");   
+}
+
+function closeBasketMobile(){
+    document.querySelector(".basket_wrapper").classList.remove("overlay");
+    document.body.classList.remove("no-scroll");
 }
