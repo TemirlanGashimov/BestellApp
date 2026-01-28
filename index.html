@@ -50,10 +50,19 @@
       </section>
 
       <section class="basket_wrapper">
-        <div id="basket" class="basket">
-        </div>
+        <div id="basket" class="basket"></div>
       </section>
+    </div>
+
+    <dialog id="orderDialog">
+      <div class="dialog-content">
+        <div class="dialog-icon">🚚</div>
+        <h3>Bestellung bestätigt!</h3>
+        <p>Ihre Bestellung ist unterwegs</p>
+
+        <button onclick="closeOrderDialog()">OK</button>
       </div>
+    </dialog>
 
     <footer>
       <div class="footer_flex_box">
@@ -67,3 +76,5 @@
   <script src="scripts/templates.js"></script>
   <script src="script.js"></script>
 </html>
+
+<img src="./assets/icons/plus_button.png" alt="">
