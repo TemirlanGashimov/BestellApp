@@ -114,14 +114,25 @@ footer {
   padding-top: 32px;
 }
 
-.basket-items{
-  background-color: rgba(253, 234, 220, 1);
+.basket-item-card{
+ background: rgba(253, 234, 220, 1);
+  border-radius: 14px;
+  padding: 12px 14px;
   margin: 16px;
-  border-radius: 8px;
-  width: auto; 
   display: flex;
   flex-direction: column;
-  padding: 8px 16px 8px 16px;
+  gap: 12px;
+}
+
+.basket-item-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.basket-item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .basket-summary{
@@ -129,6 +140,40 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 0 16px 0 16px;
+}
+
+.basket-item-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.basket-item-price {
+  font-weight: 600;
+}
+
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+
+.summary-row.total {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.buy-now-btn {
+  margin: 16px;
+  padding: 14px;
+  background: rgba(231, 108, 31, 1);
+  color: white;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .btns-price{
