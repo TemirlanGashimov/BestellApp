@@ -40,7 +40,12 @@ function addToBasket(i) {
 
 function renderBasket() {
   let basketDiv = document.getElementById("basket");
-  basketDiv.innerHTML = "<h3 class='your-basket-color'> Warenkorb </h3>";
+ basketDiv.innerHTML = `
+  <div class="basket-header">
+    <h3 class="your-basket-color">Warenkorb</h3>
+    <button class="basket-close-btn" onclick="closeBasketMobile()">✕</button>
+  </div>
+`;
 
   if (basket.length === 0) {
     basketDiv.innerHTML +=
@@ -156,6 +161,7 @@ function placeOrder(finalPrice) {
   dialog.showModal();
   basket = [];
   renderBasket();
+  closeBasketMobile();
 }
 
 function closeOrderDialog() {
@@ -163,11 +169,19 @@ function closeOrderDialog() {
 }
 
 function openBasketMobile() {
-    document.querySelector(".basket_wrapper").classList.add("overlay");
-    document.body.classList.add("no-scroll");   
+  document.querySelector(".basket_wrapper").classList.add("overlay");
+  document.body.classList.add("no-scroll");
 }
 
 function closeBasketMobile(){
     document.querySelector(".basket_wrapper").classList.remove("overlay");
     document.body.classList.remove("no-scroll");
+}
+
+function handleBasketClick() {
+  if (basket.length === 0) {
+    return;
+  }
+
+  openBasketMobile();
 }
