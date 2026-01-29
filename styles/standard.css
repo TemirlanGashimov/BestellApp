@@ -3,3 +3,8 @@
   padding: 0px;
   scroll-behavior: smooth;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+}
