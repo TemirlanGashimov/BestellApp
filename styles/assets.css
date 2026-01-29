@@ -1,0 +1,10 @@
+.background {
+  background-image: url(./assets/icons/header\ photo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 540px;
+  width: 100%;
+}
