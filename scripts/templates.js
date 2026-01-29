@@ -13,3 +13,4 @@ function generateMenuHtml(i) {
     </div>
     `;
 }
+
