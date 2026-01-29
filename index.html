@@ -13,7 +13,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"/>
-      
+
+    <link rel="stylesheet" href="styles/dialog.css"/>
     <link rel="stylesheet" href="styles/assets.css" />
     <link rel="stylesheet" href="styles/baskets.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
@@ -69,6 +70,25 @@
         <div><p>Cookie Preferences</p></div>
       </div>
     </footer>
+
+<nav class="mobile-bottom-bar">
+  <button class="nav-btn">
+    <img src="./assets/icons/icon_home.png" alt="Home">
+  </button>
+
+  <button class="nav-btn">
+    <img src="./assets/icons/icon_myprofile.png" alt="User">
+  </button>
+
+  <button class="nav-btn">
+    <img src="./assets/icons/icon_logo_responsive.png" alt="Menu">
+  </button>
+
+  <button class="nav-btn" onclick="openBasketMobile()">
+    <img src="./assets/icons/icon_buy.png" alt="Basket">
+  </button>
+</nav>
+
   </body>
   <script src="scripts/db.js"></script>
   <script src="scripts/templates.js"></script>
