@@ -51,6 +51,8 @@ function renderBasket() {
   let deliveryPrice = 4.99;
   let totalPrice = 0;
 
+basketDiv.innerHTML += "<div class='overflow-y' id='items'> </div>" 
+
   for (let indexBasket = 0; indexBasket < basket.length; indexBasket++) {
     let itemTotal = basket[indexBasket].amount * basket[indexBasket].price;
     totalPrice += itemTotal;
@@ -66,7 +68,8 @@ function renderBasket() {
         `;
     }
 
-    basketDiv.innerHTML += `
+    document.getElementById("items").innerHTML+= `
+    
     <div class="basket-item-card">
     <div class="basket-item-title">
       ${basket[indexBasket].amount} x ${basket[indexBasket].name}
@@ -125,7 +128,6 @@ function renderBasket() {
   <button class="buy-now-btn" onclick="placeOrder(${finalPrice.toFixed(2)})">
     Bestellen (${finalPrice.toFixed(2)}€)
   </button>
-  </div>
   </div>
   `;
 }
