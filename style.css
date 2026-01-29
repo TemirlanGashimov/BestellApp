@@ -166,6 +166,7 @@ footer {
   .basket {
     min-height: 100%;
     border-radius: 0;
+    display: none;
   }
 
   .buy-now-btn {
