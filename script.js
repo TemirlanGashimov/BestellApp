@@ -40,12 +40,8 @@ function renderBasket() {
   let basketDiv = document.getElementById("basket"); // Warenkorb-DIV aus dem HTML holen
  
   // Kopfbereich des Warenkorbs (Titel + X-Button)
-  basketDiv.innerHTML = ` 
-  <div class="basket-header">
-    <h3 class="your-basket-color">Warenkorb</h3>
-    <button class="basket-close-btn" onclick="closeBasketMobile()">✕</button>
-  </div>
-`;
+  basketDiv.innerHTML = basketHeaderTemplates();
+
 
   if (basket.length === 0) {  // Wenn keine Produkte im Warenkorb sind
     basketDiv.innerHTML +=
@@ -73,68 +69,14 @@ basketDiv.innerHTML += "<div class='overflow-y' id='items'> </div>"  // Containe
         `;
     }
 
-    document.getElementById("items").innerHTML+= `
-    
-    <div class="basket-item-card">
-    <div class="basket-item-title">
-      ${basket[indexBasket].amount} x ${basket[indexBasket].name}
-    </div>
-
-    <div class="basket-item-bottom">
-      <div class="basket-item-actions">
-        <button onclick="deleteItemFromBasket(${indexBasket})">
-          <img src="./assets/icons/delete.png">
-        </button>
-
-        ${basket[indexBasket].amount >= 2? `
-          <button onclick="removeFromBasket(${indexBasket})">
-            <img src="./assets/icons/minus_button.png">
-          </button>
-        `
-        : ""
-        }
-
-        <button onclick="increaseAmount(${indexBasket})">
-          <img src="./assets/icons/plus_button.png">
-        </button>
-      </div>
-
-      <div class="basket-item-price">
-        ${itemTotal.toFixed(2)}€
-      </div>
-    </div>
-  </div>`;
-  }
+    document.getElementById("items").innerHTML += basketItems(indexBasket,itemTotal)
+}
 
   let finalPrice = totalPrice + deliveryPrice; // Endpreis = Zwischensumme + Lieferung
 
-  basketDiv.innerHTML += `
-   <div class="basket-summary">
-    <div class="summary-row">
-      <span>Zwischensumme</span>
-      <span>${totalPrice.toFixed(2)}€</span>
-    </div>
+  basketDiv.innerHTML += basketPrice(totalPrice,deliveryPrice,finalPrice)
 
-    <div class="summary-row">
-      <span>Lieferkosten</span>
-      <span>${deliveryPrice.toFixed(2)}€</span>
-    </div>
-
-    <hr>
-
-    <div class="summary-row total">
-      <span>Gesamtsumme</span>
-      <span>${finalPrice.toFixed(2)}€</span>
-    </div>
-  `;
-
-  basketDiv.innerHTML += `
-  <div class="btn-position"> 
-  <button class="buy-now-btn" onclick="placeOrder(${finalPrice.toFixed(2)})">
-    Bestellen (${finalPrice.toFixed(2)}€)
-  </button>
-  </div>
-  `;
+  basketDiv.innerHTML += finalPriceOfAll(finalPrice) 
 }
 
 function increaseAmount(indexBasket) { //Funktion für Hochzählen bei plusdrücken 
