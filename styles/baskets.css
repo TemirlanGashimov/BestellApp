@@ -105,7 +105,7 @@
 
 .basket-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 16px;
 }
@@ -139,6 +139,7 @@
     z-index: 2000;
     justify-content: center;
     align-items: flex-end;
+    width: auto;
   }
 
   .basket {
